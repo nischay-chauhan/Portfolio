@@ -1,5 +1,5 @@
-import React from 'react';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import ProjectCard from "./ProjectCard";
 
 const projectsData = [
   {
@@ -45,25 +45,33 @@ const projectsData = [
   {
     id: 6,
     title: "Car Hub Website",
-    description: "Demo website where a user can search for a car and then rent it ",
+    description:
+      "Demo website where a user can search for a car and then rent it ",
     image: "/image/project/project2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/nischay-chauhan/car-showcase",
   },
 ];
 
-
 const ProjectSection = () => {
-    return (
-      <div>
-        <h2>My Projects</h2>
-        <div>
-          {projectsData.map((project) => (
-            <ProjectCard key={project.id} title={project.title} description={project.description} imgUrl={project.image} gitUrl={project.gitUrl} />
-          ))}
-        </div>
+  return (
+    <div>
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        My Projects
+      </h2>
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {projectsData.map((project) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.image}
+            gitUrl={project.gitUrl}
+          />
+        ))}
       </div>
-    );
-  };
-  
-  export default ProjectSection;
+    </div>
+  );
+};
+
+export default ProjectSection;
