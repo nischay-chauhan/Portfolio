@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import ProjectSection from './components/ProjectSection';
 import EmailSection from './components/EmailSection';
 import Footer from './components/Footer';
+import BlobCursor from './components/BlobCursor';
 
 export default function Home() {
   return (
@@ -15,8 +16,10 @@ export default function Home() {
       <AboutSection />
       <ProjectSection />
       <EmailSection />
+      <BlobCursor />
       </div>
     <Footer />
+    
     </main>
   );
 }

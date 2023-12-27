@@ -1,5 +1,8 @@
+"use client"
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { useRef } from "react";
+import {motion , useInView}  from "framer-motion"
 
 const projectsData = [
   {
@@ -53,14 +56,35 @@ const projectsData = [
   },
 ];
 
+
+const cardVariants = {
+  offscreen: {
+    y: 300,
+    opacity: 0
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+
+}
+
 const ProjectSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div>
+    <div ref={ref} className="container mx-auto px-4 py-12">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project) => (
+          <motion.li variants={cardVariants} initial="offscreen" whileInView="onscreen">
           <ProjectCard
             key={project.id}
             title={project.title}
@@ -68,8 +92,9 @@ const ProjectSection = () => {
             imgUrl={project.image}
             gitUrl={project.gitUrl}
           />
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
