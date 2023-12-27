@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import { TypeAnimation } from 'react-type-animation';
 
@@ -18,7 +19,7 @@ const HeroSection = () => {
             <TypeAnimation
       sequence={[
         'Nischay Chauhan',
-        1500, // wait 1s before replacing "Mice" with "Hamsters"
+        1500, 
         'Web Devloper',
         1500,
         'Software Developer',
