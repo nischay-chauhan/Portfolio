@@ -14,13 +14,13 @@ const EmailSection = () => {
           open. Feel free to send me an email.
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/nischay-chauhan">
+          <Link target="_blank" href="https://github.com/nischay-chauhan">
             <div className="flex items-center text-[#ADB7BE] hover:text-white">
               <FaGithub className="mr-2" />
               GitHub
             </div>
           </Link>
-          <Link href="https://linkedin.com/in/your-linkedin-username">
+          <Link target="_blank" href="https://www.linkedin.com/in/nischay-kumar-4510ab254/">
             <div className="flex items-center text-[#ADB7BE] hover:text-white">
               <FaLinkedin className="mr-2" />
               LinkedIn
