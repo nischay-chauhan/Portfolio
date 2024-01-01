@@ -74,24 +74,25 @@ const cardVariants = {
 
 }
 
+
 const ProjectSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
   return (
-    <div ref={ref} className="container mx-auto px-4 py-12">
+    <div id="projects" ref={ref} className="container mx-auto px-4 py-12">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
       <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project) => (
-          <motion.li variants={cardVariants} initial="offscreen" whileInView="onscreen">
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-          />
+          <motion.li variants={cardVariants} initial="offscreen" whileInView="onscreen" key={project.id}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+            />
           </motion.li>
         ))}
       </ul>

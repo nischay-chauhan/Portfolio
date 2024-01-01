@@ -51,9 +51,15 @@ const Navbar = () => {
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
+          {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                {link.title === "Projects" || link.title === "About" || link.title === "Contact" ? (
+                  <Link href={link.path}>
+                    {link.title}
+                  </Link>
+                ) : (
+                  <NavLink href={link.path} title={link.title} />
+                )}
               </li>
             ))}
           </ul>
