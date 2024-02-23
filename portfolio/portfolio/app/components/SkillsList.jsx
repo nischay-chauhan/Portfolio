@@ -28,6 +28,9 @@ const SkillsList = () => {
       <p style={{ background: "#4A5568" }} className="inline-flex items-center px-2 py-1 rounded-full text-sm text-white">
         <FaPython /> Django
       </p>
+      <p style={{ background: "#4A5568" }} className="inline-flex items-center px-2 py-1 rounded-full text-sm text-white">
+      
+      </p>
     </div>
   );
 };
