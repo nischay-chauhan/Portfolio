@@ -15,8 +15,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Blog Application",
-    description: "Blog application made using Django and Bootstrap",
+    title: "Shoe Website",
+    description: "Shoe website made using react and Firebase auth and firebase realtime Database ",
     image: "/image/project/project5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/nischay-chauhan/django-projects/tree/master",
@@ -31,8 +31,8 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "CRM Application",
-    description: "It is a CRM application made using Django",
+    title: "Admin-User ",
+    description: "It is a Admin-User application made using React have role based authentication",
     image: "/image/project/project1.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/nischay-chauhan/Django-crm/tree/main",
